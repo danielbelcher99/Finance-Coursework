@@ -1,0 +1,46 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{natbib}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+\usepackage[a4paper, total={6in, 8in}]{geometry}\title{\Large Conduct a case study on how the pandemic has affected a hospitality or a manufacturing industry in contrast to an online retail industry. }
+\author{By Daniel Belcher}
+\date{February 2021}
+
+\begin{document}
+
+
+\maketitle
+
+\section{Introduction}
+
+{There is no doubt that the Covid-19 pandemic has had a huge impact on how many companies operate. In March of 2020 the virus swept the globe and caused many countries to implement policies that deterred unnecessary gathering, especially within indoor spaces. This disproportionately affected hospitality industries, many of which were forced to close, fortunately companies within the technology sector continued to grow. This essay will compare how the pandemic has affected a hospitality industry, in contrast to a online retail industry. Using various methods of analysis I will be showing Fiverr, an online freelance marketplace has continued to grow while Vail resorts, a hospitality and leisure industry. I will be presenting the two data-sets and comparing both companies stock data between the 1st of December 2020 and the 31st of January 2021,  I will also be identifying if there is any correlation between the two data sets.}
+
+\begin{center}
+    \includegraphics[width=.9\textwidth]{Scatter.png}
+\end{center}
+
+{The online freelance marketplace Fiverr was well placed to take advantage of social distancing and lockdown restrictions. While some businesses came to a halt during lockdown, with many choosing to lay off employees, Fiverr reported a 82\% increase in revenue for Q2 of 2020 compared to 2019 (Alpar et al, 2020). Who claim that regular employment for IT jobs has shifted to temporary work (ibid). This shift in work has had a positive effect on Fiverr’s stock price. When we observe the stock price from the 1st of December 2020 to the 31st of January 2021, we can see that Fiverr (Ticker symbol ‘FVRR’) initially started trading at 197 and continued to trade around the \$200 mark until the new year, at which point the stock gained momentum, and broke through its resistance to reach a new high of \$262. The spike in the stock price may have been linked to the January effect. A phenomenon in which small cap stocks tend to have disproportionately high rates of return during the month of January (Haug et al, 2006). However in mid-January Fiverr was downgraded to ‘sell’ from ‘neutral’ at UBS.  Analysts said the stock was symbolic of a market that values growth rather than a justified valuation based on multi year fundamental analysis. The stock subsequently dipped to finish the month at \$206, ending the 2-month period with a moderate return (Goldstein, Sheridan, 2021).}
+
+\begin{center}
+    \includegraphics[width=.9\textwidth]{Python.jpeg}
+\end{center}
+
+\section{List of References}
+
+Alpar, P & Osterbrink, L. (2020), Consequences of the Covid-19 Pandemic for IT Work. Published on Taylor & Francis Online. https://www.tandfonline.com/doi/full/10.1080/10580530.
+2020.1820638scroll=top&needAccess=true [Accessed 21/02/21]
+
+Haung, M & Hirschey M (2006), The January Effect. Charlottesville, VA, Published by the Financial Analysts Journal, pp 78-88 https://www.proquest.com/docview/
+219239494?OpenUrlRefId=info:xri/sid:primo&accountid=14987 [Accessed 07/03/2021]
+
+Silva, J. P. (2020), Startups in Action: The Critical Year One. Choices That Built Etsy, HotelTonight, Fiverr, and more. Berlkey, CA, Apress LLC - https://learning.oreilly.com
+/library/view/startups-in-action/978148425
+7876/html/4770071En9Chapter.xhtml
+[Accessed 21/02/21]
+
+Goldstein S (2021), Peloton, Fiverr and Chewy downgraded to sell at UBS. MarketWatch, 19th January https://www.marketwatch.com/story/peleoton-fiverr-and-chevy-downgraded-to-sell-at-ubs-2021-01-19 [Accessed 07/03/2021]
+
+
+\end{document}
