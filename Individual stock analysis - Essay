@@ -1,9 +1,11 @@
+
 \documentclass[12pt, letterpaper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{natbib}
 \setlength{\parskip}{1em}
 \setlength{\parindent}{0em}
+\usepackage[utf8]{inputenc}
 \usepackage[a4paper, total={6in, 8in}]{geometry}\title{\Large Conduct a case study on how the pandemic has affected a hospitality or a manufacturing industry in contrast to an online retail industry. }
 \author{By Daniel Belcher}
 \date{February 2021}
@@ -12,35 +14,129 @@
 
 
 \maketitle
-
+\tableofcontents
+\cleardoublepage
 \section{Introduction}
 
-{There is no doubt that the Covid-19 pandemic has had a huge impact on how many companies operate. In March of 2020 the virus swept the globe and caused many countries to implement policies that deterred unnecessary gathering, especially within indoor spaces. This disproportionately affected hospitality industries, many of which were forced to close, fortunately companies within the technology sector continued to grow. This essay will compare how the pandemic has affected a hospitality industry, in contrast to a online retail industry. Using various methods of analysis I will be showing Fiverr, an online freelance marketplace has continued to grow while Vail resorts, a hospitality and leisure industry. I will be presenting the two data-sets and comparing both companies stock data between the 1st of December 2020 and the 31st of January 2021,  I will also be identifying if there is any correlation between the two data sets.}
+{There is no doubt that the Covid-19 pandemic has had a huge impact on how many companies operate. In March of 2020 the virus swept the globe and caused many countries to implement policies that deterred unnecessary gathering, especially within indoor spaces. This disproportionately affected hospitality industries, many of which were forced to close, fortunately companies within the technology sector continued to grow. This essay will compare how the pandemic has affected the stock price of a hospitality industry, in contrast to a online retail industry. Using various methods of analysis I will be showing how Fiverr, an online freelance marketplace has continued to grow while Vail resorts, a hospitality and leisure industry has steadily declined. I will be presenting the two data-sets and comparing both companies stock data between the 1st of December 2020 and the 31st of January 2021,  I will then be identifying trends and if there is any correlation between the two data sets.}
+
+\section{Data Sets}
 
 \begin{center}
-    \includegraphics[width=.9\textwidth]{Scatter.png}
+    \includegraphics[width=.9\textwidth]{FVRR Adj Close.png}
 \end{center}
 
-{The online freelance marketplace Fiverr was well placed to take advantage of social distancing and lockdown restrictions. While some businesses came to a halt during lockdown, with many choosing to lay off employees, Fiverr reported a 82\% increase in revenue for Q2 of 2020 compared to 2019 (Alpar et al, 2020). Who claim that regular employment for IT jobs has shifted to temporary work (ibid). This shift in work has had a positive effect on Fiverr’s stock price. When we observe the stock price from the 1st of December 2020 to the 31st of January 2021, we can see that Fiverr (Ticker symbol ‘FVRR’) initially started trading at 197 and continued to trade around the \$200 mark until the new year, at which point the stock gained momentum, and broke through its resistance to reach a new high of \$262. The spike in the stock price may have been linked to the January effect. A phenomenon in which small cap stocks tend to have disproportionately high rates of return during the month of January (Haug et al, 2006). However in mid-January Fiverr was downgraded to ‘sell’ from ‘neutral’ at UBS.  Analysts said the stock was symbolic of a market that values growth rather than a justified valuation based on multi year fundamental analysis. The stock subsequently dipped to finish the month at \$206, ending the 2-month period with a moderate return (Goldstein, Sheridan, 2021).}
+\cleardoublepage
+{The online freelance marketplace Fiverr was well placed to take advantage of social distancing and lockdown restrictions. While some businesses came to a halt during lockdown, with many choosing to lay off employees, Fiverr reported a 82\% increase in revenue for Q2 of 2020 compared to 2019 (Alpar et al, 2020). Who claim that regular employment for IT jobs has shifted to temporary work (ibid). This shift in work has had a positive effect on Fiverr’s stock price. When we observe the stock price from the 1st of December 2020 to the 31st of January 2021, we can see that Fiverr (Ticker symbol ‘FVRR’) initially started trading at 197 and continued to trade around the \$200 mark until the new year, at which point the stock gained momentum, and broke through its resistance to reach a new high of \$262. The spike in the stock price may have been linked to the January effect. A phenomenon in which small cap stocks tend to have disproportionately high rates of return during the month of January (Haug et al, 2006). However in mid-January Fiverr was downgraded to ‘sell’ from ‘neutral’ at UBS.  Analysts said the stock was symbolic of a market that values growth rather than a justified valuation based on multi year fundamental analysis. The stock subsequently dipped to finish the month at \$206, ending the 2-month period with a moderate return (Goldstein, Sheridan, 2021)}
+
+
 
 \begin{center}
-    \includegraphics[width=.9\textwidth]{Python.jpeg}
+    \includegraphics[width=.9\textwidth]{MTN Adj Close.png}
 \end{center}
+
+{In contrast to Fiverr's volatile growth, Vail Resort's stock price declined steadily from early December to the end of January. The mountain resort leisure \& hospitality syndicate reported a 28.4\% decrease in net income. The CEO Robert Katz claimed that the company "continued to be negatively impacted by COVID-19 related capacity constraints and limitations, particularly in food and beverage \& ski school" (Vail Resorts Inc, 2021). The only aspect of Vail's resort business that has boomed has been their property development segment . Many affluent city dwellers choosing to escape hard hit cities like New York, buying up properties in prestigious resorts like Vail and Whistler Blackcomb (Rowlinson, 2020) . This has helped consolidate their financial statements and may be one of the reasons the stock hasn't plummeted further (Vail Resorts Inc, 2021).}
+
+\section{Correlation Analysis}
+
+\begin{center}
+
+    \includegraphics[width=.9\textwidth]{Python.png}
+\end{center}
+
+{Before performing correlation analysis I decided to visualise the data sets by plotting them against each other as if it were a portfolio of securities, doing so provided insight into what to expect when calculating the correlation coefficient. Observing the graph it was clear that the two data sets would have a weak linear relationship [Appendix A]. After this I calculated the rate of return of both data sets. Using Python I was able to perform this using the sec\_returns function, which I then assigned to the NumPy log function [B]:} 
+
+{\LARGE\[\ln_{\left(\frac{P{t}}{P{t-1}}\right) }
+\cleardoublepage
+\normalsize {Calculating the standard deviation, covariance and correlation of these returns helped quantify the relationship [B]. Fiverr's standard deviation of 0.27 was over twice as large as Vail's, this helped illustrate the contrast in volatility, showing Fiverr as the security with the most risk. It was surprising to see a positive correlation considering that during the two month time period, Vails stock fell and Fiverr's stock rose, however this may have been due to the pull back towards the end of the January when Fiverr's stock fell  over 37 points in the space of a week. From observation, the linear relationship between the two securities looks to be the strongest at this time. However, overall there was only a very weak positive linear relationship between the two stocks, since the correlation coefficient was just under 0.1 . With such a weak correlation, it would be unwise to predict a future relationship using regression analysis.}  
+
+ \begin{table}[Correlation Matrix] \centering 
+  \label{} 
+  \begin{adjustbox}{\textwidth}
+\begin{tabular}{@{\extracolsep{5pt}} ccccccccccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & FIVERR & MTN \\ 
+\hline \\[-1.8ex] 
+FVRR & $1$ & $0.098$ \\ MTN & $0.098$ & $1$ \\
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{adjustbox}
+\end{table} 
+
+\begin{center}
+    \includegraphics[width=.8\textwidth]{Scatter Matrix.png}
+\end{center}
+
+{The correlation Matrix above has been graphed, to illustrate the relationship between the securities daily returns. Observing the graph it is evident that there is almost no correlation between the two stocks. The histograms on the diagnal, displays the price changes for both securities.}
+
+\section{Trend Analysis
+}    \includegraphics[width=.95\textwidth]{Trendlines.png}
+
+{The trend lines drawn reflect support and resistance points, making it easier to analyse the buy and sell signals for both stocks (Wise, 2001). Connecting the lows of Fiverr's stock price helps illustrate a steady growth pattern. After observing four key support points, It's clear to see why analysts downgraded the stock after it rallied in early January, since it was breaking away from its support and resistance (Goldstein, 2021). Although Fiverrr hit all time highs on multiple occasions, the support trend line suggests steady growth over the long term. With a parallel channel forming, traders may wish to hold long or short positions on Vail's stock to maximise profits. While long term investors worried about the break in support, can use the resistance points to look for sell signals on this slightly bearish stock (Kaufman, 2013).  }
+\cleardoublepage
+\section{Conclusion}
+
+{In conclusion, due to Fiverr's volatile growth, and Vail Resort's stable decline there was almost no corrilation between the two stocks. Although the trend lines were useful, giving a clear and reliable indication of direction with at least 3 points of contact (Wise 2001), they were somewhat misleading when performing correlation analysis, after learning that the stocks did not have an inverse relationship like the trend lines suggests. Although I initially set out to find two stocks with a negative correlation, and a similar market cap, it became apparent that no such relationship existed between the stocks I'd chosen, it also became obvious that market cap is irrelevant when analysing returns. With many hospitality and leisure stocks recovering at the time, it might have been more logical to pick two stocks that appeared to be positively correlated, as finding stocks with an inverse relationship proved difficult. This would have enabled me to perform regression analysis, as well as identify external factors that affected both stocks such as current events.}
+
 
 \section{List of References}
 
-Alpar, P & Osterbrink, L. (2020), Consequences of the Covid-19 Pandemic for IT Work. Published on Taylor & Francis Online. https://www.tandfonline.com/doi/full/10.1080/10580530.
+Alpar, P & Osterbrink, L. (2020), Consequences of the Covid-19 Pandemic for IT Work. Published on Taylor & Francis Online. https://www.tandfonline.com/doi/full/10.10\\80/10580530.
 2020.1820638scroll=top&needAccess=true [Accessed 21/02/21]
+
+Goldstein S (2021), Peloton, Fiverr and Chewy downgraded to sell at UBS. MarketWatch, 19th January https://www.marketwatch.com/story/peleoton-fiverr-and-chevy-downgraded-to-sell-at-ubs-2021-01-19 [Accessed 07/03/2021]
 
 Haung, M & Hirschey M (2006), The January Effect. Charlottesville, VA, Published by the Financial Analysts Journal, pp 78-88 https://www.proquest.com/docview/
 219239494?OpenUrlRefId=info:xri/sid:primo&accountid=14987 [Accessed 07/03/2021]
 
-Silva, J. P. (2020), Startups in Action: The Critical Year One. Choices That Built Etsy, HotelTonight, Fiverr, and more. Berlkey, CA, Apress LLC - https://learning.oreilly.com
+Kaufman P J (2013) Trading systems and methods, John Willy \& Sons https://
+ebookcentral.proquest.com/lib/westminster/detail.action?docID=1110727# [Accessed 22/03/21]
+
+Olson S, (2021), Vail Resorts Reports Fiscal 2021 Second Quarter Results and provides outlook for Fiscal 2021, Third Quarter,  Broomfield CO http://investors.vailresorts.com\\/news-releases/
+news-release-details/vail-resorts-reports-fiscal-2021-second-quarter-results-and [Accessed 15/03/21]
+
+Rowlinson L, (2020), Rocky Mountain high: sales surge in Colorado's premier ski resorts, London, UK, The Financial Times: https://www.ft.com/content/bdae991b-beb1-4785-905d-6f7af23ce8b3 [Accessed 16/03/21]
+
+Silva, J. P. (2020), Startups in Action: The Critical Year One. Choices That Built Etsy, HotelTonight, Fiverr, and more. Berlkey, CA, Apress LLC - https://learning.\\oreilly.com
 /library/view/startups-in-action/978148425
-7876/html/4770071En9Chapter.xhtml
+7876/html/4770071En9Chapter\\.xhtml
 [Accessed 21/02/21]
 
-Goldstein S (2021), Peloton, Fiverr and Chewy downgraded to sell at UBS. MarketWatch, 19th January https://www.marketwatch.com/story/peleoton-fiverr-and-chevy-downgraded-to-sell-at-ubs-2021-01-19 [Accessed 07/03/2021]
+Wise C, (2001), Proper trend lines keep stock in perspective, Los Angeles, CA. Investors Business Daily, Inc. https://search.proquest.com/docview/1026971235?accountid
+=14987&pq-origsite=primo
+[Accessed 22/03/21]
+
+
+
+
+
+\section{Appendices}
+
+{\textbf{LaTeX Source code -} https://www.overleaf.com/project/603ba967c1de703726bba9dd}
+
+\appendix \textbf{[A]} {\textbf{ - Calculating returns:}}{ file:///Users/danielbelcher/Downloads/Python\%20\\Financial\%20Markets\%20analysis-Copy1\%20(2).html}
+
+\begin{center}
+\includegraphics[width=.8\textwidth]{Appendix A1.png}
+\end{center}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{Appendix A2.png}
+\end{center}
+
+\appendix \textbf{[B]} {\textbf{ -  Correlation analysis:}}
+{file:///Users/danielbelcher/Downloads/Correlation\%\\20analysis\%20(2).html}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{Appendix B1.png}
+\end{center}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{Appendix B2.png}
+\end{center}
+\begin{center}
+    \includegraphics[width=.8\textwidth]{Appendix B3.png}
+\end{center}
+
 
 
 \end{document}
+
